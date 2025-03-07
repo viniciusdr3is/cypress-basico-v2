@@ -13,7 +13,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Install specific dependencies
-        run: npm install react react-dom
+        run: npm install -D react react-dom
       - name: Run Cypress tests
         uses: cypress-io/github-action@v2
         with:
