@@ -3,7 +3,7 @@
 describe('Central de Atendimento ao Cliente TAT', function() {
 
   beforeEach(function(){ //Executa sempre esse bloco
-    cy.visit('../../src/index.html') }),
+    cy.visit('http://127.0.0.1:8000/') }),
 
   it('verifica o título da aplicação', function() {
     cy.title().should('eq', 'Central de Atendimento ao Cliente TAT')
@@ -94,7 +94,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
       .should('have.value', 'blog') 
     })
 
-        //Exercicio 10
+      //Exercicio 10
   it('marca o tipo de atendimento "Feedback"', () => {
     cy.get('input[type="radio"][value="feedback"]')
     .check()
