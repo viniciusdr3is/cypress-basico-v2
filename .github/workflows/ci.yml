@@ -1,3 +1,4 @@
+
 name: End-to-end tests 🧪
 on: [push]
 jobs:
@@ -5,10 +6,13 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v6
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.RECORD_KEY }}
         with:
+          command: npm run teste:cloud
           node-version: '14'
       - name: Install dependencies
         run: npm install
@@ -16,8 +20,8 @@ jobs:
         run: npm install -D react react-dom
       - name: Run Cypress tests
         uses: cypress-io/github-action@v2
-        env:
-             CYPRESS_RECODE_KEY: ${{ secrets.RECODE_KEY }}
+
         with:
           config-file: cypress.config.js
-          command: npm run teste:cloud
+
+          
