@@ -20,4 +20,4 @@ jobs:
              CYPRESS_RECODE_KEY: ${{ secrets.RECODE_KEY }}
         with:
           config-file: cypress.config.js
-          command: npm run test:cloud
+          command: npm run teste:cloud
