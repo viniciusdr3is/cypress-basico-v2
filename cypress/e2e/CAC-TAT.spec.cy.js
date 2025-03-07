@@ -1,9 +1,9 @@
-<reference types="Cypress"/>
+/// <reference types="cypress" />
 
 describe('Central de Atendimento ao Cliente TAT', function() {
 
   beforeEach(function(){ //Executa sempre esse bloco
-    cy.visit('http://127.0.0.1:8000/') }),
+    cy.visit('../../src/index.html') }),
 
   it('verifica o título da aplicação', function() {
     cy.title().should('eq', 'Central de Atendimento ao Cliente TAT')
