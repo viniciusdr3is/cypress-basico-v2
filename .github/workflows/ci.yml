@@ -16,5 +16,8 @@ jobs:
         run: npm install -D react react-dom
       - name: Run Cypress tests
         uses: cypress-io/github-action@v2
+        env:
+             CYPRESS_RECODE_KEY: ${{ secrets.RECODE_KEY }}
         with:
           config-file: cypress.config.js
+          command: npm run test:cloud

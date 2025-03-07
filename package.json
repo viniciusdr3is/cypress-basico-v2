@@ -11,7 +11,8 @@
     "test:mobile": "cypress run --config viewportWidth=410,viewportHeight=860",
     "cypress:run": "cypress run --config-file cypress.config.js",
     "cypress:open": "cypress open --config-file cypress.config.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "teste:cloud": "cypress run --record"
   },
 
   "repository": {
