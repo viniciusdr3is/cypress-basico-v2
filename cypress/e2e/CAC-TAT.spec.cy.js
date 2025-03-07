@@ -10,7 +10,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
   }),
   
 //Exercicio 00 extra
-  it('preenche os campos obrigatórios e envia o formulário', function(){
+  it.only('preenche os campos obrigatórios e envia o formulário', function(){
     const longText = 'Teste, Teste, Teste, Teste, Teste, Teste, Teste, Teste, Teste, Teste, Teste, Teste, Teste, Teste, Teste, Teste, Teste, Teste, Teste,  '
     cy.get('#firstName').type('Vinicius')
     cy.get('#lastName').type('Teste')
