@@ -4,6 +4,8 @@ jobs:
   cypress-run:
     runs-on: ubuntu-20.04
     steps:
+      - name: Remove old Cypress config
+        run: rm -f cypress.json
       - name: Checkout
         uses: actions/checkout@v2
       # Install NPM dependencies, cache them correctly
